@@ -9,6 +9,10 @@
        <li>The incessant use of hashtags will get you banned.</li>
      </ul>
    </div>
+
+   <% @wiki.errors.full_messages.each do |message| %>
+    <%= message %>
+   <%end%>
    <div class="col-md-8">
      <%= form_for @wiki do |f| %>
        <div class="form-group">
