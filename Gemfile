@@ -73,3 +73,4 @@ gem 'jquery-rails'
 # bootstrap
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'pundit'
