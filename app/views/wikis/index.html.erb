@@ -13,6 +13,8 @@
     <% end %>
   </div>
   <div class="col-md-4">
+  <% if user_signed_in? %>
     <%= link_to "New Public Wiki", new_wiki_path, class: 'btn btn-success' %>
+  <% end %>
   </div>
 </div>
