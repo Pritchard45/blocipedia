@@ -16,7 +16,7 @@ end
   email:     'zander.pritchard@gmail.com',
   password:  'helloworld',
   role:       2
-  )
+).confirm
 end
 
 # standard
@@ -32,7 +32,7 @@ users = User.all
   Wiki.create!(
     title:  RandomData.random_sentence,
     body:   RandomData.random_paragraph,
-    user: User.new
+    user: users.sample
   )
 end
 wikis = Wiki.all
