@@ -5,6 +5,11 @@
   <small>
     submitted <%= time_ago_in_words(@wiki.created_at) %> ago by <%= @wiki.user %> <br>
   </small>
+  <% if @wiki.private %>
+    <p> Private </p>
+  <% elsif %>
+    <p> Public </p>
+  <% end %>  
 </div>
 
 <div class="row">
