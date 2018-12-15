@@ -16,7 +16,7 @@ end
   email:     'zander.pritchard@gmail.com',
   password:  'helloworld',
   role:       2
-).confirm
+)
 end
 
 # standard

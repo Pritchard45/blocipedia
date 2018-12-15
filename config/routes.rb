@@ -3,13 +3,21 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :wikis
 
-  resources :charges, only: [:new, :create]
+  resources :wikis do
+     resources :collaborators, only: [:create, :destroy]
+   end
 
-  resources :users
+   resources :charges, only: [:new, :create]
 
-  match "users/:id/downgrade" => "users#downgrade", :as => "downgrade_user", via: [:get, :post]
+   resources :users, only: [] do
+     member do
+       get 'show'
+       post 'downgrade'
+     end
+   end
+
+  # match "users/:id/downgrade" => "users#downgrade", :as => "downgrade_user", via: [:get, :post]
 
   get 'about' => 'welcome#about'
 
